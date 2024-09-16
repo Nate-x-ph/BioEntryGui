@@ -16,8 +16,8 @@ namespace Bio_Entry
 
         public static List<string> ColorList = new List<string>()
         {
-                       "RoyalBlue",
-                       "DarkBlue"
+                       "Darkgoldenrod",
+                       "Darkgoldenrod"
         };
 
 

@@ -66,15 +66,16 @@
             // 
             this.comboBox1.AllowDrop = true;
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
-            this.comboBox1.ItemHeight = 16;
+            this.comboBox1.ItemHeight = 31;
             this.comboBox1.Items.AddRange(new object[] {
             "Admin",
             "Faculty"});
             this.comboBox1.Location = new System.Drawing.Point(418, 329);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(415, 24);
+            this.comboBox1.Size = new System.Drawing.Size(415, 39);
             this.comboBox1.TabIndex = 5;
             // 
             // label3
@@ -92,15 +93,16 @@
             // 
             this.comboBox2.AllowDrop = true;
             this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.IntegralHeight = false;
-            this.comboBox2.ItemHeight = 16;
+            this.comboBox2.ItemHeight = 31;
             this.comboBox2.Items.AddRange(new object[] {
             "Admin",
             "Faculty"});
             this.comboBox2.Location = new System.Drawing.Point(418, 423);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(415, 24);
+            this.comboBox2.Size = new System.Drawing.Size(415, 39);
             this.comboBox2.TabIndex = 7;
             // 
             // label4
@@ -117,9 +119,10 @@
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(417, 526);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(416, 22);
+            this.textBox1.Size = new System.Drawing.Size(416, 38);
             this.textBox1.TabIndex = 9;
             // 
             // button2

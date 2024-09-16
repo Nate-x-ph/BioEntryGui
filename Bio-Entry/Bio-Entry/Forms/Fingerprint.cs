@@ -26,5 +26,10 @@ namespace Bio_Entry.Forms
         {
             this.Close();  // Close the current form
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace Bio_Entry.Forms
     {
         private Form activeForm = null;  // To keep track of the currently active child form
         private Panel panelDesktopPane;  // Reference to the Dashboard's panel
+
         public Registration(Panel dashboardPanel)
         {
             InitializeComponent();
@@ -79,7 +80,10 @@ namespace Bio_Entry.Forms
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
-            this.Close();  // Close the current form
+            // Close the current form
+            this.Close();
+
+            
         }
 
         // Event handler for mouse entering the button area

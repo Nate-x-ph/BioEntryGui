@@ -12,3 +12,8 @@ C:\Users\jonathan\source\repos\Bio-Entry\Bio-Entry\bin\Debug\Bio-Entry.exe
 C:\Users\jonathan\source\repos\Bio-Entry\Bio-Entry\bin\Debug\Bio-Entry.pdb
 C:\Users\jonathan\source\repos\Bio-Entry\Bio-Entry\obj\Debug\Bio-Entry.exe
 C:\Users\jonathan\source\repos\Bio-Entry\Bio-Entry\obj\Debug\Bio-Entry.pdb
+C:\Users\jonathan\source\repos\Bio-Entry\Bio-Entry\bin\Debug\Interop.WMPLib.dll
+C:\Users\jonathan\source\repos\Bio-Entry\Bio-Entry\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\jonathan\source\repos\Bio-Entry\Bio-Entry\obj\Debug\Interop.WMPLib.dll
+C:\Users\jonathan\source\repos\Bio-Entry\Bio-Entry\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\jonathan\source\repos\Bio-Entry\Bio-Entry\obj\Debug\Bio-Entry.csproj.ResolveComReference.cache

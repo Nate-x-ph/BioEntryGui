@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AxWMPLib; // Add this using directive for AxWindowsMediaPlayer
 
 namespace Bio_Entry
 {
@@ -17,7 +18,9 @@ namespace Bio_Entry
         private Random random;
         private int tempIndex;
         private Form activeForm;
-    
+        private AxWindowsMediaPlayer mediaPlayer; // Declare mediaPlayer
+        public string defaultTitle { get; private set; } = "Welcome bossing kumusta ang buhay-buhay!"; // Default title for the dashboard
+
         public Dashboard()
         {
             InitializeComponent();
@@ -28,6 +31,40 @@ namespace Bio_Entry
             timer1.Interval = 1000; // 1 second
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick; // Subscribe to Tick event
+
+            // Subscribe to the Load event
+            this.Load += Dashboard_Load;
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            // Initialize media player
+            InitializeMediaPlayer();
+        }
+
+        private void InitializeMediaPlayer()
+        {
+            // Create and configure media player
+            mediaPlayer = new AxWindowsMediaPlayer();
+            mediaPlayer.Dock = DockStyle.Fill; // Fill the panel
+            mediaPlayer.Enabled = true;
+
+            // Add media player to panel
+            panelDesktopPane.Controls.Add(mediaPlayer);
+
+            // Configure media player
+            mediaPlayer.uiMode = "none"; // Hide controls
+            mediaPlayer.settings.setMode("loop", true); // Set looping
+            mediaPlayer.URL = "C:\\Users\\jonathan\\source\\repos\\Bio-Entry\\Bio-Entry\\Images\\bgVid.mp4"; // Set the path to your video file
+
+            // Play the video
+            mediaPlayer.Ctlcontrols.play();
+        }
+
+        public void SetTitle(string title)
+        {
+            lblTitle.Text = title;
         }
 
         //Methods
@@ -92,6 +129,8 @@ namespace Bio_Entry
             if (activeForm != null)
             {
                 activeForm.Close();
+                // Reset the title when the active form is closed
+                lblTitle.Text = defaultTitle;
             }
             ActivateButton(btnSender);
             activeForm = childForm;
@@ -107,7 +146,12 @@ namespace Bio_Entry
 
         private void regBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Registration(this.panelDesktopPane), sender);
+            // Create an instance of the Registration form
+            Forms.Registration registrationForm = new Forms.Registration(this.panelDesktopPane);
+            // Set the Dashboard form as the owner
+            registrationForm.Owner = this;
+            // Open the Registration form
+            OpenChildForm(registrationForm, sender);
         }
 
         private void authBtn_Click(object sender, EventArgs e)
@@ -123,9 +167,37 @@ namespace Bio_Entry
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblTimer.Text = DateTime.Now.ToString("dddd, MMMM d, yyyy\nhh:mm:ss tt");
+            lblTimer.Text = DateTime.Now.ToString("dddd, MMMM d, yyyy hh:mm:ss tt");
         }
 
-        
+        private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+            // Close any active form if there is one
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                activeForm = null; // Clear the reference to the active form
+            }
+
+            // Reset the title to default
+            lblTitle.Text = defaultTitle;
+
+            // Optionally, you might want to reset the button states or appearance here
+            DisableButton();
+
+            // Show the main dashboard (which is this current form)
+            // This step is optional as this is the current form, and it should be visible by default
+            this.BringToFront();
+        }
     }
 }
