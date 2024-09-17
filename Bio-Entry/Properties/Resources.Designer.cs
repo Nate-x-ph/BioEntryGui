@@ -63,6 +63,16 @@ namespace Bio_Entry.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap authIcon {
+            get {
+                object obj = ResourceManager.GetObject("authIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bg3 {
             get {
                 object obj = ResourceManager.GetObject("bg3", resourceCulture);
@@ -133,10 +143,51 @@ namespace Bio_Entry.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pinIcon {
+            get {
+                object obj = ResourceManager.GetObject("pinIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_icon_set_for_secure_authentication_password_login_pincode_and_security_vector_png_image_12663652 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-icon-set-for-secure-authentication-password-login-pincode-and-security-ve" +
                         "ctor-png-image_12663652", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap regIcon {
+            get {
+                object obj = ResourceManager.GetObject("regIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RFID {
+            get {
+                object obj = ResourceManager.GetObject("RFID", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rfid_payment_line_icon_credit_debit_card_contactless_payment_from_credit_card_vector {
+            get {
+                object obj = ResourceManager.GetObject("rfid-payment-line-icon-credit-debit-card-contactless-payment-from-credit-card-vec" +
+                        "tor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

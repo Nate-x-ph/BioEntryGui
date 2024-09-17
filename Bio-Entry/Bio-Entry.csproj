@@ -125,6 +125,12 @@
     <Compile Include="Forms\Fingerprint.Designer.cs">
       <DependentUpon>Fingerprint.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PinAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PinAuth.Designer.cs">
+      <DependentUpon>PinAuth.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Pincode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="Forms\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RFID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RFID.Designer.cs">
+      <DependentUpon>RFID.cs</DependentUpon>
     </Compile>
     <Compile Include="MainStartUp.cs">
       <SubType>Form</SubType>
@@ -164,11 +176,17 @@
     <EmbeddedResource Include="Forms\Fingerprint.resx">
       <DependentUpon>Fingerprint.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PinAuth.resx">
+      <DependentUpon>PinAuth.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Pincode.resx">
       <DependentUpon>Pincode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RFID.resx">
+      <DependentUpon>RFID.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainStartUp.resx">
       <DependentUpon>MainStartUp.cs</DependentUpon>
@@ -242,6 +260,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\bg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\authIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\pinIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\RFID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rfid-payment-line-icon-credit-debit-card-contactless-payment-from-credit-card-vector.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

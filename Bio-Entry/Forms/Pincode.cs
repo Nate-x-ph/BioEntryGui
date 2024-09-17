@@ -17,6 +17,9 @@ namespace Bio_Entry.Forms
         {
             InitializeComponent();
             InitializeComboBoxes();
+
+            // Set the txtPincode to use asterisks for privacy
+            txtPincode.PasswordChar = '*';
         }
         private void InitializeComboBoxes()
         {

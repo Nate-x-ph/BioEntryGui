@@ -19,9 +19,9 @@ namespace Bio_Entry
         // Text Loop Variables
         private Label lblLoopingText;
         private Timer textLoopTimer;
-        private string textToLoop = "Welcome! Please choose your Authentication";
+        private string textToLoop = "Welcome! Please choose your Authentication method.";
         private int textPosition = 0;
-        private int textWidth;  
+        private int textWidth;
 
         public string defaultTitle { get; private set; } = "Welcome bossing kumusta ang buhay-buhay!"; // Default title for the dashboard
 
@@ -70,10 +70,11 @@ namespace Bio_Entry
 
             // Create and configure the Timer for looping text
             textLoopTimer = new Timer();
-            textLoopTimer.Interval = 50; // Update every 100 milliseconds
+            textLoopTimer.Interval = 20; // Update every 100 milliseconds
             textLoopTimer.Tick += TextLoopTimer_Tick;
             textLoopTimer.Start();
         }
+
 
         private void TextLoopTimer_Tick(object sender, EventArgs e)
         {
@@ -81,15 +82,18 @@ namespace Bio_Entry
             lblLoopingText.Text = textToLoop;
             textWidth = lblLoopingText.Width;
 
-            // Update label position
-            lblLoopingText.Left -= 5; // Move left by 5 pixels
+            // Move the label to the left
+            lblLoopingText.Left -= 2; // Adjust speed by changing the value (pixels moved per tick)
+
+            // Check if the label has completely moved out of the visible area on the left side
             if (lblLoopingText.Right < 0)
             {
-                lblLoopingText.Left = welcomePanel.ClientSize.Width; // Reset to right side
+                // Reset the label's position to the right side of the panel
+                lblLoopingText.Left = welcomePanel.ClientSize.Width;
             }
         }
 
-        
+
 
         private void InitializeMediaPlayer()
         {
@@ -143,60 +147,7 @@ namespace Bio_Entry
             lblTitle.Text = title;
         }
 
-        // Methods
-        private Color SelectThemeColor()
-        {
-            int index = random.Next(Themecolors.ColorList.Count);
-            while (tempIndex == index)
-            {
-                index = random.Next(Themecolors.ColorList.Count);
-            }
-            tempIndex = index;
-            string color = Themecolors.ColorList[index];
 
-            try
-            {
-                return ColorTranslator.FromHtml(color);
-            }
-            catch (Exception)
-            {
-                // Log or handle the error and return a default color
-                return Color.Black; // Fallback color
-            }
-        }
-
-        private void ActivateButton(object btnSender)
-        {
-            if (btnSender != null)
-            {
-                if (currentButton != (Button)btnSender)
-                {
-                    DisableButton();
-                    Color color = SelectThemeColor();
-                    currentButton = (Button)btnSender;
-                    currentButton.BackColor = color;
-                    currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    titlePanel.BackColor = color;
-                    logoPanel.BackColor = Themecolors.ChangeColorBrightness(color, -0.3);
-                    Themecolors.PrimaryColor = color;
-                    Themecolors.SecondaryColor = Themecolors.ChangeColorBrightness(color, -0.3);
-                }
-            }
-        }
-
-        private void DisableButton()
-        {
-            foreach (Control previousBtn in navPanel.Controls)
-            {
-                if (previousBtn.GetType() == typeof(Button))
-                {
-                    previousBtn.BackColor = Color.MidnightBlue;
-                    previousBtn.ForeColor = Color.White;
-                    previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                }
-            }
-        }
 
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -206,7 +157,7 @@ namespace Bio_Entry
                 // Reset the title when the active form is closed
                 lblTitle.Text = defaultTitle;
             }
-            ActivateButton(btnSender);
+
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -235,8 +186,6 @@ namespace Bio_Entry
             // Reset the title to default
             lblTitle.Text = defaultTitle;
 
-            // Optionally, you might want to reset the button states or appearance here
-            DisableButton();
 
             // Show the main dashboard (which is this current form)
             // This step is optional as this is the current form, and it should be visible by default
@@ -248,9 +197,31 @@ namespace Bio_Entry
             // Handle painting if needed
         }
 
-        private void regBtn_Click(object sender, EventArgs e)
+        
+
+        
+
+
+        private void rfidBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void pinBtn_Click_1(object sender, EventArgs e)
+        {
+            // Change the text to "Please Input Your Pin for Authentication"
+            textToLoop = "Please Input Your Pin for Authentication";
+
+            // Restart the timer to apply the new text
+            textLoopTimer.Stop();
+            lblLoopingText.Text = textToLoop; // Set the text immediately
+            textWidth = lblLoopingText.Width; // Update textWidth for the new text
+            textLoopTimer.Start();
+
+            // Open the PIN authentication form as a child form
+            Form pinAuthForm = new Forms.PinAuth(); // Adjust this based on your form's namespace and class name
+            OpenChildForm(pinAuthForm, sender);
         }
     }
 }

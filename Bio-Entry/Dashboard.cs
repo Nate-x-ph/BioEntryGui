@@ -14,6 +14,7 @@ namespace Bio_Entry
     public partial class Dashboard : Form
     {
         //Fields
+        private Button activeButton = null;
         private Button currentButton;
         private Random random;
         private int tempIndex;
@@ -26,6 +27,9 @@ namespace Bio_Entry
             InitializeComponent();
 
             random = new Random();
+
+            // Add event handler
+            this.regBtn.Click += new System.EventHandler(this.regBtn_Click);
 
             // Initialize Timer
             timer1.Interval = 1000; // 1 second
@@ -101,26 +105,26 @@ namespace Bio_Entry
         }
 
 
-        private void ActivateButton(object btnSender)
-        {
-            if (btnSender != null)
-            {
-                if (currentButton != (Button)btnSender)
-                {
-                    DisableButton();
-                    Color color = SelectThemeColor();
-                    currentButton = (Button)btnSender;
-                    currentButton.BackColor = color;
-                    currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    titlePanel.BackColor = color;
-                    logoPanel.BackColor = Themecolors.ChangeColorBrightness(color, -0.3);
-                    Themecolors.PrimaryColor = color;
-                    Themecolors.SecondaryColor = Themecolors.ChangeColorBrightness(color, -0.3);
+        //private void ActivateButton(object btnSender)
+        //{
+        //    if (btnSender != null)
+        //    {
+        //        if (currentButton != (Button)btnSender)
+        //        {
+        //            DisableButton();
+        //            Color color = SelectThemeColor();
+        //            currentButton = (Button)btnSender;
+        //            currentButton.BackColor = color;
+        //            currentButton.ForeColor = Color.White;
+        //            currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //            titlePanel.BackColor = color;
+        //            logoPanel.BackColor = Themecolors.ChangeColorBrightness(color, -0.3);
+        //            Themecolors.PrimaryColor = color;
+        //            Themecolors.SecondaryColor = Themecolors.ChangeColorBrightness(color, -0.3);
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
 
         private void DisableButton()
         {
@@ -135,6 +139,8 @@ namespace Bio_Entry
             }
         }
 
+
+
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
@@ -143,7 +149,7 @@ namespace Bio_Entry
                 // Reset the title when the active form is closed
                 lblTitle.Text = defaultTitle;
             }
-            ActivateButton(btnSender);
+            //ActivateButton(btnSender);
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -157,8 +163,30 @@ namespace Bio_Entry
 
         private void regBtn_Click(object sender, EventArgs e)
         {
+            // Cast sender to Button
+            Button clickedButton = sender as Button;
+
+            // Check if the clicked button is not already the active one
+            if (activeButton != clickedButton)
+            {
+                // Reset appearance of the previously active button
+                if (activeButton != null)
+                {
+                    // Reset previous button's appearance (example)
+                    activeButton.BackColor = SystemColors.Control; // Default color
+                    activeButton.ForeColor = SystemColors.ControlText; // Default text color
+                }
+
+                // Set new active button appearance
+                clickedButton.BackColor = Color.White; // Highlight color
+                clickedButton.ForeColor = Color.MidnightBlue; // Highlight text color
+
+                // Update the active button reference
+                activeButton = clickedButton;
+            }
+
             // Create an instance of the Registration form
-            Forms.Registration registrationForm = new Forms.Registration(this.panelDesktopPane);
+            Forms.Registration registrationForm = new Forms.Registration(this.panelDesktopPane, this.navPanel, this.lblTitle, this.titlePanel, this.logoPanel);
             // Set the Dashboard form as the owner
             registrationForm.Owner = this;
             // Open the Registration form
@@ -175,7 +203,7 @@ namespace Bio_Entry
 
             // Create a Timer to close the startup form after a few seconds
             Timer timer = new Timer();
-            timer.Interval = 7000; // 3000 ms = 3 seconds (change this as needed)
+            timer.Interval = 5000; // 3000 ms = 3 seconds (change this as needed)
             timer.Tick += (s, args) =>
             {
                 // Stop and dispose the timer
@@ -217,7 +245,7 @@ namespace Bio_Entry
 
         }
 
-        private void homeBtn_Click(object sender, EventArgs e)
+        public void ResetDashboard()
         {
             // Close any active form if there is one
             if (activeForm != null)
@@ -229,12 +257,56 @@ namespace Bio_Entry
             // Reset the title to default
             lblTitle.Text = defaultTitle;
 
-            // Optionally, you might want to reset the button states or appearance here
-            DisableButton();
+            InitializeComponent();
 
-            // Show the main dashboard (which is this current form)
-            // This step is optional as this is the current form, and it should be visible by default
-            this.BringToFront();
+
+        }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+
+            ResetDashboard();
+
+        }
+
+        // Method to reset button highlights
+        public void ResetButtonHighlights()
+        {
+            // Assuming regBtn is a button in the Dashboard form
+            regBtn.BackColor = Color.MidnightBlue; // Default color
+            regBtn.ForeColor = Color.White; // Default text color
+        }
+
+        private void authBtn_Click_1(object sender, EventArgs e)
+        {
+            // Create an instance of the Startup form
+            Startup startupForm = new Startup();
+
+            // Show the Startup form
+            startupForm.Show();
+
+            // Create a Timer to close the startup form after a few seconds
+            Timer timer = new Timer();
+            timer.Interval = 5000; // 3000 ms = 3 seconds (change this as needed)
+            timer.Tick += (s, args) =>
+            {
+                // Stop and dispose the timer
+                timer.Stop();
+                timer.Dispose();
+
+                // Close the startup form
+                startupForm.Close();
+
+                // Show the Authentication form
+                Authentication authForm = new Authentication(this);
+                authForm.Show();
+
+                // Optionally, close the current form if needed
+                this.Hide();
+            };
+
+            // Start the timer
+            timer.Start();
         }
     }
 }

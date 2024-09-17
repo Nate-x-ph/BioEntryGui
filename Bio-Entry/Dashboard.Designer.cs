@@ -31,15 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.navPanel = new System.Windows.Forms.Panel();
-            this.authBtn = new System.Windows.Forms.Button();
-            this.regBtn = new System.Windows.Forms.Button();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.authBtn = new System.Windows.Forms.Button();
+            this.regBtn = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTimer = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.homeBtn = new System.Windows.Forms.Button();
@@ -53,6 +55,8 @@
             // navPanel
             // 
             this.navPanel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.navPanel.Controls.Add(this.panel4);
+            this.navPanel.Controls.Add(this.panel5);
             this.navPanel.Controls.Add(this.authBtn);
             this.navPanel.Controls.Add(this.regBtn);
             this.navPanel.Controls.Add(this.logoPanel);
@@ -61,35 +65,6 @@
             this.navPanel.Name = "navPanel";
             this.navPanel.Size = new System.Drawing.Size(366, 683);
             this.navPanel.TabIndex = 0;
-            // 
-            // authBtn
-            // 
-            this.authBtn.FlatAppearance.BorderSize = 0;
-            this.authBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.authBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.authBtn.Location = new System.Drawing.Point(0, 325);
-            this.authBtn.Name = "authBtn";
-            this.authBtn.Size = new System.Drawing.Size(366, 70);
-            this.authBtn.TabIndex = 2;
-            this.authBtn.Text = "Authentication";
-            this.authBtn.UseVisualStyleBackColor = true;
-            this.authBtn.Click += new System.EventHandler(this.authBtn_Click);
-            // 
-            // regBtn
-            // 
-            this.regBtn.FlatAppearance.BorderSize = 0;
-            this.regBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.regBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regBtn.ForeColor = System.Drawing.Color.White;
-            this.regBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.regBtn.Location = new System.Drawing.Point(0, 249);
-            this.regBtn.Name = "regBtn";
-            this.regBtn.Size = new System.Drawing.Size(366, 70);
-            this.regBtn.TabIndex = 1;
-            this.regBtn.Text = "Registration";
-            this.regBtn.UseVisualStyleBackColor = true;
-            this.regBtn.Click += new System.EventHandler(this.regBtn_Click);
             // 
             // titlePanel
             // 
@@ -117,6 +92,34 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // authBtn
+            // 
+            this.authBtn.FlatAppearance.BorderSize = 0;
+            this.authBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.authBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.authBtn.Location = new System.Drawing.Point(121, 338);
+            this.authBtn.Name = "authBtn";
+            this.authBtn.Size = new System.Drawing.Size(244, 70);
+            this.authBtn.TabIndex = 6;
+            this.authBtn.Text = "Authentication";
+            this.authBtn.UseVisualStyleBackColor = true;
+            this.authBtn.Click += new System.EventHandler(this.authBtn_Click_1);
+            // 
+            // regBtn
+            // 
+            this.regBtn.FlatAppearance.BorderSize = 0;
+            this.regBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regBtn.ForeColor = System.Drawing.Color.White;
+            this.regBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.regBtn.Location = new System.Drawing.Point(121, 262);
+            this.regBtn.Name = "regBtn";
+            this.regBtn.Size = new System.Drawing.Size(244, 70);
+            this.regBtn.TabIndex = 5;
+            this.regBtn.Text = "Registration";
+            this.regBtn.UseVisualStyleBackColor = true;
             // 
             // panelDesktopPane
             // 
@@ -167,6 +170,30 @@
             this.panel1.Size = new System.Drawing.Size(942, 37);
             this.panel1.TabIndex = 2;
             // 
+            // panel4
+            // 
+            this.panel4.AutoSize = true;
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = global::Bio_Entry.Properties.Resources.regIcon;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.ForeColor = System.Drawing.Color.Transparent;
+            this.panel4.Location = new System.Drawing.Point(23, 262);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(92, 70);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel5
+            // 
+            this.panel5.AutoSize = true;
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = global::Bio_Entry.Properties.Resources.authIcon;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.ForeColor = System.Drawing.Color.Transparent;
+            this.panel5.Location = new System.Drawing.Point(2, 333);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(113, 88);
+            this.panel5.TabIndex = 8;
+            // 
             // logoPanel
             // 
             this.logoPanel.BackColor = System.Drawing.Color.DarkBlue;
@@ -212,6 +239,7 @@
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.navPanel.ResumeLayout(false);
+            this.navPanel.PerformLayout();
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
             this.panelDesktopPane.ResumeLayout(false);
@@ -226,8 +254,6 @@
 
         private System.Windows.Forms.Panel navPanel;
         private System.Windows.Forms.Panel logoPanel;
-        private System.Windows.Forms.Button authBtn;
-        private System.Windows.Forms.Button regBtn;
         private System.Windows.Forms.Panel titlePanel;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelDesktopPane;
@@ -237,5 +263,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button homeBtn;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button authBtn;
+        private System.Windows.Forms.Button regBtn;
     }
 }

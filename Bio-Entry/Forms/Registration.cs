@@ -12,13 +12,27 @@ namespace Bio_Entry.Forms
 {
     public partial class Registration : Form
     {
+        //Fields
+        private int tempIndex;
+        private Button currentButton;
+        private Random random;
         private Form activeForm = null;  // To keep track of the currently active child form
         private Panel panelDesktopPane;  // Reference to the Dashboard's panel
+        private Panel navPanel;          // Reference to the Dashboard's navPanel
+        private Label lblTitle;          // Reference to the Dashboard's lblTitle
+        private Panel titlePanel;
+        private Panel logoPanel;
+        public string defaultTitle { get; private set; } = "Welcome bossing kumusta ang buhay-buhay!"; // Default title for the dashboard
 
-        public Registration(Panel dashboardPanel)
+        public Registration(Panel dashboardPanel, Panel navPanel, Label lblTitle, Panel titlePanel, Panel logoPanel)
         {
             InitializeComponent();
-            panelDesktopPane = dashboardPanel;  // Assign the panel from the Dashboard form
+
+            random = new Random();
+
+            this.panelDesktopPane = dashboardPanel;  // Assign the panel from the Dashboard form
+            this.navPanel = navPanel;                // Assign the navPanel from the Dashboard form
+            this.lblTitle = lblTitle;                // Assign the lblTitle from the Dashboard form
             //LoadTheme();    
 
             // Subscribe to hover events for buttons
@@ -43,6 +57,7 @@ namespace Bio_Entry.Forms
         //        }
         //    }
         //}
+
 
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -75,15 +90,30 @@ namespace Bio_Entry.Forms
 
         private void rfidBtn_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Forms.RFID(), sender);
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
-            // Close the current form
-            this.Close();
+            // Close any active child form if there is one
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                activeForm = null; // Clear the reference to the active form
+            }
 
-            
+            // Reset the title to default
+            lblTitle.Text = defaultTitle;
+
+            // Notify the Dashboard form to reset
+            if (this.Owner is Dashboard dashboard)
+            {
+
+                dashboard.ResetButtonHighlights();
+            }
+
+            // Close the Registration form
+            this.Close();
         }
 
         // Event handler for mouse entering the button area

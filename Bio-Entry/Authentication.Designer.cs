@@ -31,8 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authentication));
             this.navPanel = new System.Windows.Forms.Panel();
-            this.authBtn = new System.Windows.Forms.Button();
-            this.regBtn = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.rfidBtn = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.homeBtn = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.titlePanel = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pinBtn = new System.Windows.Forms.Button();
             this.navPanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.panelDesktopPane.SuspendLayout();
@@ -56,42 +58,54 @@
             // navPanel
             // 
             this.navPanel.BackColor = System.Drawing.Color.MidnightBlue;
-            this.navPanel.Controls.Add(this.authBtn);
-            this.navPanel.Controls.Add(this.regBtn);
+            this.navPanel.Controls.Add(this.panel4);
+            this.navPanel.Controls.Add(this.panel5);
+            this.navPanel.Controls.Add(this.rfidBtn);
             this.navPanel.Controls.Add(this.logoPanel);
+            this.navPanel.Controls.Add(this.pinBtn);
             this.navPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.navPanel.Location = new System.Drawing.Point(0, 0);
             this.navPanel.Name = "navPanel";
             this.navPanel.Size = new System.Drawing.Size(366, 683);
             this.navPanel.TabIndex = 1;
             // 
-            // authBtn
+            // panel5
             // 
-            this.authBtn.FlatAppearance.BorderSize = 0;
-            this.authBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.authBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.authBtn.Location = new System.Drawing.Point(0, 325);
-            this.authBtn.Name = "authBtn";
-            this.authBtn.Size = new System.Drawing.Size(366, 70);
-            this.authBtn.TabIndex = 2;
-            this.authBtn.Text = "RFID";
-            this.authBtn.UseVisualStyleBackColor = true;
+            this.panel5.AutoSize = true;
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = global::Bio_Entry.Properties.Resources.RFID;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.ForeColor = System.Drawing.Color.Transparent;
+            this.panel5.Location = new System.Drawing.Point(27, 306);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(108, 88);
+            this.panel5.TabIndex = 10;
             // 
-            // regBtn
+            // rfidBtn
             // 
-            this.regBtn.FlatAppearance.BorderSize = 0;
-            this.regBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.regBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regBtn.ForeColor = System.Drawing.Color.White;
-            this.regBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.regBtn.Location = new System.Drawing.Point(0, 249);
-            this.regBtn.Name = "regBtn";
-            this.regBtn.Size = new System.Drawing.Size(366, 70);
-            this.regBtn.TabIndex = 1;
-            this.regBtn.Text = "Pincode";
-            this.regBtn.UseVisualStyleBackColor = true;
-            this.regBtn.Click += new System.EventHandler(this.regBtn_Click);
+            this.rfidBtn.FlatAppearance.BorderSize = 0;
+            this.rfidBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rfidBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rfidBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rfidBtn.Location = new System.Drawing.Point(107, 306);
+            this.rfidBtn.Name = "rfidBtn";
+            this.rfidBtn.Size = new System.Drawing.Size(255, 70);
+            this.rfidBtn.TabIndex = 11;
+            this.rfidBtn.Text = "RFID";
+            this.rfidBtn.UseVisualStyleBackColor = true;
+            this.rfidBtn.Click += new System.EventHandler(this.rfidBtn_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.AutoSize = true;
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = global::Bio_Entry.Properties.Resources.pinIcon;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.ForeColor = System.Drawing.Color.Transparent;
+            this.panel4.Location = new System.Drawing.Point(30, 216);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(105, 99);
+            this.panel4.TabIndex = 9;
             // 
             // logoPanel
             // 
@@ -216,6 +230,21 @@
             this.lblTitle.Text = "Welcome bossing kumusta ang buhay-buhay!";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pinBtn
+            // 
+            this.pinBtn.FlatAppearance.BorderSize = 0;
+            this.pinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pinBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinBtn.ForeColor = System.Drawing.Color.White;
+            this.pinBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.pinBtn.Location = new System.Drawing.Point(111, 231);
+            this.pinBtn.Name = "pinBtn";
+            this.pinBtn.Size = new System.Drawing.Size(255, 70);
+            this.pinBtn.TabIndex = 12;
+            this.pinBtn.Text = "Pincode";
+            this.pinBtn.UseVisualStyleBackColor = true;
+            this.pinBtn.Click += new System.EventHandler(this.pinBtn_Click_1);
+            // 
             // Authentication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,6 +256,7 @@
             this.Name = "Authentication";
             this.Text = "Authentication";
             this.navPanel.ResumeLayout(false);
+            this.navPanel.PerformLayout();
             this.logoPanel.ResumeLayout(false);
             this.panelDesktopPane.ResumeLayout(false);
             this.welcomePanel.ResumeLayout(false);
@@ -242,8 +272,6 @@
         #endregion
 
         private System.Windows.Forms.Panel navPanel;
-        private System.Windows.Forms.Button authBtn;
-        private System.Windows.Forms.Button regBtn;
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button homeBtn;
@@ -256,5 +284,9 @@
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Panel welcomePanel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button rfidBtn;
+        private System.Windows.Forms.Button pinBtn;
     }
 }
