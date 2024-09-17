@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.11.35303.130
+VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bio-Entry", "Bio-Entry\Bio-Entry.csproj", "{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bio-Entry", "Bio-Entry.csproj", "{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {876ECBFE-785A-4082-8974-2DEFA4D7BF64}
+		SolutionGuid = {B6714AE6-20E4-4B98-9210-026C616E38CD}
 	EndGlobalSection
 EndGlobal

@@ -30,14 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cmbType = new System.Windows.Forms.ComboBox();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.cmbAdmin = new System.Windows.Forms.ComboBox();
+            this.lblPincode = new System.Windows.Forms.Label();
+            this.txtPincode = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbFaculty = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -45,9 +46,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(411, 21);
+            this.label1.Location = new System.Drawing.Point(308, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 40);
+            this.label1.Size = new System.Drawing.Size(311, 33);
             this.label1.TabIndex = 1;
             this.label1.Text = "Pincode Registration Form";
             // 
@@ -56,93 +58,97 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(413, 282);
+            this.label2.Location = new System.Drawing.Point(310, 258);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 28);
+            this.label2.Size = new System.Drawing.Size(105, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Select Type:";
             // 
-            // comboBox1
+            // cmbType
             // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.ItemHeight = 31;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Admin",
-            "Faculty"});
-            this.comboBox1.Location = new System.Drawing.Point(418, 329);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(415, 39);
-            this.comboBox1.TabIndex = 5;
+            this.cmbType.AllowDrop = true;
+            this.cmbType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.IntegralHeight = false;
+            this.cmbType.ItemHeight = 26;
+            this.cmbType.Location = new System.Drawing.Point(314, 296);
+            this.cmbType.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(312, 34);
+            this.cmbType.TabIndex = 5;
+            this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged);
             // 
-            // label3
+            // lblUser
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(413, 374);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 28);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Select User:";
+            this.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(310, 333);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(105, 23);
+            this.lblUser.TabIndex = 6;
+            this.lblUser.Text = "Select User:";
             // 
-            // comboBox2
+            // cmbAdmin
             // 
-            this.comboBox2.AllowDrop = true;
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.IntegralHeight = false;
-            this.comboBox2.ItemHeight = 31;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Admin",
-            "Faculty"});
-            this.comboBox2.Location = new System.Drawing.Point(418, 423);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(415, 39);
-            this.comboBox2.TabIndex = 7;
+            this.cmbAdmin.AllowDrop = true;
+            this.cmbAdmin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAdmin.FormattingEnabled = true;
+            this.cmbAdmin.IntegralHeight = false;
+            this.cmbAdmin.ItemHeight = 26;
+            this.cmbAdmin.Location = new System.Drawing.Point(314, 373);
+            this.cmbAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbAdmin.Name = "cmbAdmin";
+            this.cmbAdmin.Size = new System.Drawing.Size(312, 34);
+            this.cmbAdmin.TabIndex = 7;
             // 
-            // label4
+            // lblPincode
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(413, 476);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(221, 28);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Please input your PIN.";
+            this.lblPincode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPincode.AutoSize = true;
+            this.lblPincode.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPincode.Location = new System.Drawing.Point(310, 416);
+            this.lblPincode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPincode.Name = "lblPincode";
+            this.lblPincode.Size = new System.Drawing.Size(185, 23);
+            this.lblPincode.TabIndex = 8;
+            this.lblPincode.Text = "Please input your PIN.";
             // 
-            // textBox1
+            // txtPincode
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(417, 526);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(416, 38);
-            this.textBox1.TabIndex = 9;
+            this.txtPincode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPincode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPincode.Location = new System.Drawing.Point(313, 456);
+            this.txtPincode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPincode.Name = "txtPincode";
+            this.txtPincode.Size = new System.Drawing.Size(313, 32);
+            this.txtPincode.TabIndex = 9;
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(418, 603);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(415, 45);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "SAVE";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSave.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(314, 519);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(311, 37);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // closeBtn
             // 
             this.closeBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.closeBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeBtn.Location = new System.Drawing.Point(901, 663);
+            this.closeBtn.Location = new System.Drawing.Point(676, 568);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(109, 41);
+            this.closeBtn.Size = new System.Drawing.Size(82, 33);
             this.closeBtn.TabIndex = 11;
             this.closeBtn.Text = "Close";
             this.closeBtn.UseVisualStyleBackColor = true;
@@ -151,28 +157,44 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackgroundImage = global::Bio_Entry.Properties.Resources.pngtree_icon_set_for_secure_authentication_password_login_pincode_and_security_vector_png_image_12663652;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(535, 80);
+            this.panel1.Location = new System.Drawing.Point(401, 94);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(193, 181);
+            this.panel1.Size = new System.Drawing.Size(145, 147);
             this.panel1.TabIndex = 2;
+            // 
+            // cmbFaculty
+            // 
+            this.cmbFaculty.AllowDrop = true;
+            this.cmbFaculty.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFaculty.FormattingEnabled = true;
+            this.cmbFaculty.IntegralHeight = false;
+            this.cmbFaculty.ItemHeight = 26;
+            this.cmbFaculty.Location = new System.Drawing.Point(314, 373);
+            this.cmbFaculty.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbFaculty.Name = "cmbFaculty";
+            this.cmbFaculty.Size = new System.Drawing.Size(312, 34);
+            this.cmbFaculty.TabIndex = 12;
             // 
             // Pincode
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1308, 683);
+            this.ClientSize = new System.Drawing.Size(981, 612);
+            this.Controls.Add(this.cmbFaculty);
             this.Controls.Add(this.closeBtn);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtPincode);
+            this.Controls.Add(this.lblPincode);
+            this.Controls.Add(this.cmbAdmin);
+            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.cmbType);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Pincode";
             this.Text = "Pincode";
             this.ResumeLayout(false);
@@ -185,12 +207,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cmbType;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.ComboBox cmbAdmin;
+        private System.Windows.Forms.Label lblPincode;
+        private System.Windows.Forms.TextBox txtPincode;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.ComboBox cmbFaculty;
     }
 }
