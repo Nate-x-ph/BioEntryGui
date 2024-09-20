@@ -5,8 +5,31 @@ using AxWMPLib; // Ensure you have this namespace
 
 namespace Bio_Entry
 {
+    //THIS ID FOR FINGERPRINT
+    delegate void Function();
+    //END..
     public partial class Authentication : Form
     {
+        //THIS IS FOR FINGERPRINT
+        private DPFP.Template Template;
+
+        private void OnTemplate(DPFP.Template template)
+        {
+            this.Invoke(new Function(delegate ()
+            {
+                Template = template;
+                if (Template != null)
+                {
+                    MessageBox.Show("The fingerprint template is ready for fingerprint verification", "Fingerprint Enrollment");
+                }
+                else
+                {
+                    MessageBox.Show("The fingerprint template is not valid. Repeat the fingerprint scanning", "Fingerprint Enrollment");
+                }
+            }));
+        }
+        //END
+
         // Fields
         private Button currentButton;
         private Random random;
@@ -108,7 +131,7 @@ namespace Bio_Entry
             // Configure media player
             mediaPlayer.uiMode = "none"; // Hide controls
             mediaPlayer.settings.setMode("loop", true); // Set looping
-            mediaPlayer.URL = "C:\\Users\\jonathan\\source\\repos\\Bio-Entry\\Bio-Entry\\Images\\authBg.mp4"; // Set the path to your video file
+            mediaPlayer.URL = "C:\\Users\\amado\\OneDrive\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Images\\authBg.mp4"; // Set the path to your video file
 
             // Mute the video
             mediaPlayer.settings.mute = true;
@@ -149,7 +172,7 @@ namespace Bio_Entry
 
 
 
-        private void OpenChildForm(Form childForm, object btnSender)
+        public void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
             {
@@ -157,6 +180,12 @@ namespace Bio_Entry
                 // Reset the title when the active form is closed
                 lblTitle.Text = defaultTitle;
             }
+
+            // Hide the rfidBtn and pinBtn
+            rfidBtn.Visible = false;
+            fingerBtn.Visible = false;
+            pinIcon.Visible = false;
+            idIcon.Visible = false;
 
             activeForm = childForm;
             childForm.TopLevel = false;
@@ -167,6 +196,21 @@ namespace Bio_Entry
             childForm.BringToFront();
             childForm.Show();
             lblTitle.Text = childForm.Text;
+
+            // Attach event handler for when the child form is closed
+            childForm.FormClosed += ChildForm_FormClosed;
+        }
+
+        private void ChildForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Show the rfidBtn and pinBtn again
+            rfidBtn.Visible = true;
+            fingerBtn.Visible = true;
+            pinIcon.Visible = true;
+            idIcon.Visible = true;
+
+            // Optionally reset the title or perform other actions
+            lblTitle.Text = defaultTitle;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -204,14 +248,8 @@ namespace Bio_Entry
 
         private void rfidBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-
-        private void pinBtn_Click_1(object sender, EventArgs e)
-        {
             // Change the text to "Please Input Your Pin for Authentication"
-            textToLoop = "Please Input Your Pin for Authentication";
+            textToLoop = "Please Scan and Verify your RFID for Authentication";
 
             // Restart the timer to apply the new text
             textLoopTimer.Stop();
@@ -219,9 +257,31 @@ namespace Bio_Entry
             textWidth = lblLoopingText.Width; // Update textWidth for the new text
             textLoopTimer.Start();
 
-            // Open the PIN authentication form as a child form
-            Form pinAuthForm = new Forms.PinAuth(); // Adjust this based on your form's namespace and class name
-            OpenChildForm(pinAuthForm, sender);
+            OpenChildForm(new Forms.rfidAuth(), sender);
+
+            //Adder Code for fingerprint enrollment...
+            Forms.rfidAuth RFIDFrm = new Forms.rfidAuth();
+            RFIDFrm.Hide();
         }
+
+
+        private void fingerBtn_Click(object sender, EventArgs e)
+        {
+            // Change the text to "Please Input Your Pin for Authentication"
+            textToLoop = "Please Scan your Fingerprint for Authentication";
+
+            // Restart the timer to apply the new text
+            textLoopTimer.Stop();
+            lblLoopingText.Text = textToLoop; // Set the text immediately
+            textWidth = lblLoopingText.Width; // Update textWidth for the new text
+            textLoopTimer.Start();
+
+            OpenChildForm(new Forms.FingerVerify(), sender);
+
+            //Adder Code for fingerprint enrollment...
+            Forms.FingerVerify FingerFrm = new Forms.FingerVerify();
+            FingerFrm.Hide();
+        }
+
     }
-}
+    }

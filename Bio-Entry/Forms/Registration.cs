@@ -10,8 +10,31 @@ using System.Windows.Forms;
 
 namespace Bio_Entry.Forms
 {
+    //THIS ID FOR FINGERPRINT
+        delegate void Function();
+    //END..
     public partial class Registration : Form
     {
+        //THIS IS FOR FINGERPRINT
+            private DPFP.Template Template;
+
+            private void OnTemplate(DPFP.Template template)
+            {
+                this.Invoke(new Function(delegate ()
+                {
+                    Template = template;
+                    if (Template != null)
+                    {
+                        MessageBox.Show("The fingerprint template is ready for fingerprint verification", "Fingerprint Enrollment");
+                    }
+                    else
+                    {
+                        MessageBox.Show("The fingerprint template is not valid. Repeat the fingerprint scanning", "Fingerprint Enrollment");
+                    }
+                }));
+            }
+        //END
+
         //Fields
         private int tempIndex;
         private Button currentButton;
@@ -58,7 +81,6 @@ namespace Bio_Entry.Forms
         //    }
         //}
 
-
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
@@ -80,7 +102,14 @@ namespace Bio_Entry.Forms
 
         private void fingerBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Fingerprint(), sender);
+            OpenChildForm(new Forms.Enroll(), sender);
+
+            //Adder Code for fingerprint enrollment...
+            Enroll EnFrm = new Enroll();
+            EnFrm.OnTemplate += this.OnTemplate;
+            EnFrm.Hide();
+            //End..
+
         }
 
         private void pinBtn_Click(object sender, EventArgs e)

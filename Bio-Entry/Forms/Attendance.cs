@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Bio_Entry.Forms
 {
-    public partial class PinAuth : Form
+    public partial class Attendance : Form
     {
-        public PinAuth()
+        public Attendance()
         {
             InitializeComponent();
-
-
         }
     }
 }

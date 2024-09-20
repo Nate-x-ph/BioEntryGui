@@ -117,5 +117,10 @@ namespace Bio_Entry.Forms
                 btn.ForeColor = Color.Black; // Revert text color to default
             }
         }
+
+        internal void OpenChildForm(User userDetailsForm, object value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
