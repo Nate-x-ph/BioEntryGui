@@ -93,6 +93,16 @@ namespace Bio_Entry.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BioEntry___2D_Transparent {
+            get {
+                object obj = ResourceManager.GetObject("BioEntry - 2D Transparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BioEntryLogo {
             get {
                 object obj = ResourceManager.GetObject("BioEntryLogo", resourceCulture);
@@ -106,6 +116,16 @@ namespace Bio_Entry.Properties {
         internal static System.Drawing.Bitmap CCS {
             get {
                 object obj = ResourceManager.GetObject("CCS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formBg {
+            get {
+                object obj = ResourceManager.GetObject("formBg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

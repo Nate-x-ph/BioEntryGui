@@ -15,7 +15,11 @@ namespace Bio_Entry
             this.WindowState = FormWindowState.Maximized;
 
             // Set the video URL (adjust the path to your video)
+<<<<<<< HEAD
             string videoPath = @"C:\Users\amado\OneDrive\Documents\GitHub\BioEntryGui\Bio-Entry\Images\bgVid.mp4"; // Change this path to your actual video
+=======
+            string videoPath = @"C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\Images\2.mp4"; // Change this path to your actual video
+>>>>>>> 21abc8fb577023bf59e82df0a54e2f51a0cd7887
 
             // Set the media player to fill the form
             axWindowsMediaPlayer1.Dock = DockStyle.Fill;

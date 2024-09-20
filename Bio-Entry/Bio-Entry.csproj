@@ -346,7 +346,14 @@
     <None Include="Resources\rfid-payment-line-icon-credit-debit-card-contactless-payment-from-credit-card-vector.jpg" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Images\signoutIcon.png" />
+=======
+    <None Include="Images\BioEntry - 2D Transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\formBg.jpg" />
+>>>>>>> 21abc8fb577023bf59e82df0a54e2f51a0cd7887
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.navPanel = new System.Windows.Forms.Panel();
+            this.authBtn = new System.Windows.Forms.Button();
+            this.regBtn = new System.Windows.Forms.Button();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.authBtn = new System.Windows.Forms.Button();
-            this.regBtn = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTimer = new System.Windows.Forms.Label();
@@ -66,6 +66,34 @@
             this.navPanel.Size = new System.Drawing.Size(366, 683);
             this.navPanel.TabIndex = 0;
             // 
+            // authBtn
+            // 
+            this.authBtn.FlatAppearance.BorderSize = 0;
+            this.authBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.authBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.authBtn.Location = new System.Drawing.Point(121, 418);
+            this.authBtn.Name = "authBtn";
+            this.authBtn.Size = new System.Drawing.Size(244, 70);
+            this.authBtn.TabIndex = 6;
+            this.authBtn.Text = "Authentication";
+            this.authBtn.UseVisualStyleBackColor = true;
+            this.authBtn.Click += new System.EventHandler(this.authBtn_Click_1);
+            // 
+            // regBtn
+            // 
+            this.regBtn.FlatAppearance.BorderSize = 0;
+            this.regBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regBtn.ForeColor = System.Drawing.Color.White;
+            this.regBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.regBtn.Location = new System.Drawing.Point(121, 342);
+            this.regBtn.Name = "regBtn";
+            this.regBtn.Size = new System.Drawing.Size(244, 70);
+            this.regBtn.TabIndex = 5;
+            this.regBtn.Text = "Registration";
+            this.regBtn.UseVisualStyleBackColor = true;
+            // 
             // titlePanel
             // 
             this.titlePanel.BackColor = System.Drawing.Color.DarkGoldenrod;
@@ -92,34 +120,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // authBtn
-            // 
-            this.authBtn.FlatAppearance.BorderSize = 0;
-            this.authBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.authBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.authBtn.Location = new System.Drawing.Point(121, 338);
-            this.authBtn.Name = "authBtn";
-            this.authBtn.Size = new System.Drawing.Size(244, 70);
-            this.authBtn.TabIndex = 6;
-            this.authBtn.Text = "Authentication";
-            this.authBtn.UseVisualStyleBackColor = true;
-            this.authBtn.Click += new System.EventHandler(this.authBtn_Click_1);
-            // 
-            // regBtn
-            // 
-            this.regBtn.FlatAppearance.BorderSize = 0;
-            this.regBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.regBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regBtn.ForeColor = System.Drawing.Color.White;
-            this.regBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.regBtn.Location = new System.Drawing.Point(121, 262);
-            this.regBtn.Name = "regBtn";
-            this.regBtn.Size = new System.Drawing.Size(244, 70);
-            this.regBtn.TabIndex = 5;
-            this.regBtn.Text = "Registration";
-            this.regBtn.UseVisualStyleBackColor = true;
             // 
             // panelDesktopPane
             // 
@@ -154,7 +154,7 @@
             this.lblTimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTimer.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimer.ForeColor = System.Drawing.Color.White;
-            this.lblTimer.Location = new System.Drawing.Point(538, 5);
+            this.lblTimer.Location = new System.Drawing.Point(502, 5);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(80, 24);
             this.lblTimer.TabIndex = 0;
@@ -177,7 +177,7 @@
             this.panel4.BackgroundImage = global::Bio_Entry.Properties.Resources.regIcon;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel4.ForeColor = System.Drawing.Color.Transparent;
-            this.panel4.Location = new System.Drawing.Point(23, 262);
+            this.panel4.Location = new System.Drawing.Point(23, 342);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(92, 70);
             this.panel4.TabIndex = 7;
@@ -189,14 +189,14 @@
             this.panel5.BackgroundImage = global::Bio_Entry.Properties.Resources.authIcon;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.ForeColor = System.Drawing.Color.Transparent;
-            this.panel5.Location = new System.Drawing.Point(2, 333);
+            this.panel5.Location = new System.Drawing.Point(2, 413);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(113, 88);
             this.panel5.TabIndex = 8;
             // 
             // logoPanel
             // 
-            this.logoPanel.BackColor = System.Drawing.Color.DarkBlue;
+            this.logoPanel.BackColor = System.Drawing.Color.MidnightBlue;
             this.logoPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoPanel.BackgroundImage")));
             this.logoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logoPanel.Controls.Add(this.panel3);
@@ -204,7 +204,7 @@
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPanel.Location = new System.Drawing.Point(0, 0);
             this.logoPanel.Name = "logoPanel";
-            this.logoPanel.Size = new System.Drawing.Size(366, 195);
+            this.logoPanel.Size = new System.Drawing.Size(366, 256);
             this.logoPanel.TabIndex = 0;
             // 
             // panel3
@@ -217,13 +217,13 @@
             // homeBtn
             // 
             this.homeBtn.BackColor = System.Drawing.Color.AliceBlue;
-            this.homeBtn.BackgroundImage = global::Bio_Entry.Properties.Resources.BioEntryLogo;
-            this.homeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homeBtn.BackgroundImage = global::Bio_Entry.Properties.Resources.BioEntry___2D_Transparent;
+            this.homeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.homeBtn.FlatAppearance.BorderSize = 0;
             this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeBtn.Location = new System.Drawing.Point(14, -17);
+            this.homeBtn.Location = new System.Drawing.Point(24, -33);
             this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(338, 246);
+            this.homeBtn.Size = new System.Drawing.Size(316, 335);
             this.homeBtn.TabIndex = 0;
             this.homeBtn.UseVisualStyleBackColor = false;
             this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);

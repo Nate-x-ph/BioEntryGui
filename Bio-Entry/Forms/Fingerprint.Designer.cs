@@ -73,6 +73,7 @@
             // 
             // lblType
             // 
+<<<<<<< HEAD
             this.lblType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,6 +83,16 @@
             this.lblType.Size = new System.Drawing.Size(105, 23);
             this.lblType.TabIndex = 3;
             this.lblType.Text = "Select Type:";
+=======
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(205, 292);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(201, 190);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+>>>>>>> 21abc8fb577023bf59e82df0a54e2f51a0cd7887
             // 
             // cmbType
             // 
