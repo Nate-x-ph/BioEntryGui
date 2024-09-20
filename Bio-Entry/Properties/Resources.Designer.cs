@@ -93,6 +93,16 @@ namespace Bio_Entry.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BioEntry___3D_Transparent3 {
+            get {
+                object obj = ResourceManager.GetObject("BioEntry - 3D Transparent3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BioEntryLogo {
             get {
                 object obj = ResourceManager.GetObject("BioEntryLogo", resourceCulture);
@@ -157,6 +167,16 @@ namespace Bio_Entry.Properties {
             get {
                 object obj = ResourceManager.GetObject("pngtree-icon-set-for-secure-authentication-password-login-pincode-and-security-ve" +
                         "ctor-png-image_12663652", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile {
+            get {
+                object obj = ResourceManager.GetObject("profile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

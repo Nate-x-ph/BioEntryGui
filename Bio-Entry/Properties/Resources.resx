@@ -124,8 +124,8 @@
   <data name="BioEntryLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BioEntryLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rfid-payment-line-icon-credit-debit-card-contactless-payment-from-credit-card-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rfid-payment-line-icon-credit-debit-card-contactless-payment-from-credit-card-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RFID" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\RFID.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new-registration-icon-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new-registration-icon-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +139,11 @@
   <data name="logo-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RFID" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\RFID.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rfid-payment-line-icon-credit-debit-card-contactless-payment-from-credit-card-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rfid-payment-line-icon-credit-debit-card-contactless-payment-from-credit-card-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="signoutIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\signoutIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BioEntry" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BioEntry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,13 +154,16 @@
   <data name="CCS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CCS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BioEntry - 3D Transparent3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\BioEntry - 3D Transparent3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="authIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\authIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="signoutIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\signoutIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

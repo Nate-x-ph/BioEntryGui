@@ -63,12 +63,21 @@ namespace Bio_Entry.Forms
 
         protected void SetPrompt(string status, bool isSuccess)
         {
-            this.Invoke((Action)(() =>
+            if (Prompt.IsHandleCreated)
             {
-                Prompt.Text = status;
-                Prompt.ForeColor = isSuccess ? Color.Green : Color.Red;
-            }));
+                this.Invoke((Action)(() =>
+                {
+                    Prompt.Text = status;
+                    Prompt.ForeColor = isSuccess ? Color.Green : Color.Red;
+                }));
+            }
+            else
+            {
+                // Optionally handle cases where the handle is not created yet.
+                // You can set a default value or log the issue.
+            }
         }
+
 
         protected void SetStatus(string status)
         {

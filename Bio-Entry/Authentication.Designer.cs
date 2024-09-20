@@ -65,9 +65,9 @@
             this.navPanel.Controls.Add(this.fingerBtn);
             this.navPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.navPanel.Location = new System.Drawing.Point(0, 0);
-            this.navPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.navPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.navPanel.Name = "navPanel";
-            this.navPanel.Size = new System.Drawing.Size(274, 555);
+            this.navPanel.Size = new System.Drawing.Size(365, 683);
             this.navPanel.TabIndex = 1;
             // 
             // pinIcon
@@ -77,10 +77,10 @@
             this.pinIcon.BackgroundImage = global::Bio_Entry.Properties.Resources.pinIcon;
             this.pinIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pinIcon.ForeColor = System.Drawing.Color.Transparent;
-            this.pinIcon.Location = new System.Drawing.Point(22, 176);
-            this.pinIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.pinIcon.Location = new System.Drawing.Point(29, 217);
+            this.pinIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pinIcon.Name = "pinIcon";
-            this.pinIcon.Size = new System.Drawing.Size(79, 80);
+            this.pinIcon.Size = new System.Drawing.Size(105, 98);
             this.pinIcon.TabIndex = 9;
             // 
             // idIcon
@@ -90,10 +90,10 @@
             this.idIcon.BackgroundImage = global::Bio_Entry.Properties.Resources.RFID;
             this.idIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.idIcon.ForeColor = System.Drawing.Color.Transparent;
-            this.idIcon.Location = new System.Drawing.Point(20, 249);
-            this.idIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.idIcon.Location = new System.Drawing.Point(27, 306);
+            this.idIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idIcon.Name = "idIcon";
-            this.idIcon.Size = new System.Drawing.Size(81, 72);
+            this.idIcon.Size = new System.Drawing.Size(108, 89);
             this.idIcon.TabIndex = 10;
             // 
             // rfidBtn
@@ -102,10 +102,10 @@
             this.rfidBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rfidBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rfidBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rfidBtn.Location = new System.Drawing.Point(80, 249);
-            this.rfidBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.rfidBtn.Location = new System.Drawing.Point(107, 306);
+            this.rfidBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rfidBtn.Name = "rfidBtn";
-            this.rfidBtn.Size = new System.Drawing.Size(191, 57);
+            this.rfidBtn.Size = new System.Drawing.Size(255, 70);
             this.rfidBtn.TabIndex = 11;
             this.rfidBtn.Text = "RFID";
             this.rfidBtn.UseVisualStyleBackColor = true;
@@ -120,17 +120,17 @@
             this.logoPanel.Controls.Add(this.homeBtn);
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPanel.Location = new System.Drawing.Point(0, 0);
-            this.logoPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.logoPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoPanel.Name = "logoPanel";
-            this.logoPanel.Size = new System.Drawing.Size(274, 158);
+            this.logoPanel.Size = new System.Drawing.Size(365, 194);
             this.logoPanel.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(-7, -3);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(-9, -4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(281, 13);
+            this.panel3.Size = new System.Drawing.Size(375, 16);
             this.panel3.TabIndex = 1;
             // 
             // homeBtn
@@ -140,10 +140,10 @@
             this.homeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homeBtn.FlatAppearance.BorderSize = 0;
             this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeBtn.Location = new System.Drawing.Point(10, -14);
-            this.homeBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.homeBtn.Location = new System.Drawing.Point(13, -17);
+            this.homeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(254, 200);
+            this.homeBtn.Size = new System.Drawing.Size(339, 246);
             this.homeBtn.TabIndex = 0;
             this.homeBtn.UseVisualStyleBackColor = false;
             // 
@@ -154,10 +154,10 @@
             this.fingerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fingerBtn.ForeColor = System.Drawing.Color.White;
             this.fingerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.fingerBtn.Location = new System.Drawing.Point(83, 188);
-            this.fingerBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.fingerBtn.Location = new System.Drawing.Point(111, 231);
+            this.fingerBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fingerBtn.Name = "fingerBtn";
-            this.fingerBtn.Size = new System.Drawing.Size(191, 57);
+            this.fingerBtn.Size = new System.Drawing.Size(255, 70);
             this.fingerBtn.TabIndex = 12;
             this.fingerBtn.Text = "Fingerprint";
             this.fingerBtn.UseVisualStyleBackColor = true;
@@ -172,10 +172,10 @@
             this.panelDesktopPane.Controls.Add(this.welcomePanel);
             this.panelDesktopPane.Controls.Add(this.panel2);
             this.panelDesktopPane.Controls.Add(this.panel1);
-            this.panelDesktopPane.Location = new System.Drawing.Point(274, 30);
-            this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDesktopPane.Location = new System.Drawing.Point(365, 37);
+            this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(706, 525);
+            this.panelDesktopPane.Size = new System.Drawing.Size(941, 646);
             this.panelDesktopPane.TabIndex = 3;
             // 
             // welcomePanel
@@ -184,10 +184,10 @@
             this.welcomePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.welcomePanel.Controls.Add(this.label1);
             this.welcomePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.welcomePanel.Location = new System.Drawing.Point(0, 30);
-            this.welcomePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.welcomePanel.Location = new System.Drawing.Point(0, 37);
+            this.welcomePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.welcomePanel.Name = "welcomePanel";
-            this.welcomePanel.Size = new System.Drawing.Size(706, 82);
+            this.welcomePanel.Size = new System.Drawing.Size(941, 101);
             this.welcomePanel.TabIndex = 5;
             // 
             // label1
@@ -195,9 +195,8 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 0;
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -207,9 +206,9 @@
             this.panel2.Controls.Add(this.lblTimer);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(706, 30);
+            this.panel2.Size = new System.Drawing.Size(941, 37);
             this.panel2.TabIndex = 4;
             // 
             // lblTimer
@@ -220,10 +219,9 @@
             this.lblTimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTimer.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimer.ForeColor = System.Drawing.Color.White;
-            this.lblTimer.Location = new System.Drawing.Point(404, 4);
-            this.lblTimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTimer.Location = new System.Drawing.Point(539, 5);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(65, 19);
+            this.lblTimer.Size = new System.Drawing.Size(80, 24);
             this.lblTimer.TabIndex = 0;
             this.lblTimer.Text = "00:00:00";
             // 
@@ -231,10 +229,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 495);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 609);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(706, 30);
+            this.panel1.Size = new System.Drawing.Size(941, 37);
             this.panel1.TabIndex = 2;
             // 
             // titlePanel
@@ -242,10 +240,10 @@
             this.titlePanel.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.titlePanel.Controls.Add(this.lblTitle);
             this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titlePanel.Location = new System.Drawing.Point(274, 0);
-            this.titlePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.titlePanel.Location = new System.Drawing.Point(365, 0);
+            this.titlePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.titlePanel.Name = "titlePanel";
-            this.titlePanel.Size = new System.Drawing.Size(707, 30);
+            this.titlePanel.Size = new System.Drawing.Size(943, 37);
             this.titlePanel.TabIndex = 4;
             // 
             // lblTitle
@@ -253,23 +251,22 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(10, 5);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Location = new System.Drawing.Point(13, 6);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(369, 20);
+            this.lblTitle.Size = new System.Drawing.Size(451, 25);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Welcome bossing kumusta ang buhay-buhay!";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Authentication
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 555);
+            this.ClientSize = new System.Drawing.Size(1308, 683);
             this.Controls.Add(this.titlePanel);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.navPanel);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Authentication";
             this.Text = "Authentication";
             this.navPanel.ResumeLayout(false);
