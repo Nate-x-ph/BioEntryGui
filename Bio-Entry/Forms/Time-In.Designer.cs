@@ -31,6 +31,8 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.picUser = new System.Windows.Forms.PictureBox();
+            this.txtRFID = new System.Windows.Forms.TextBox();
+            this.btnIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,24 +65,42 @@
             this.picUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picUser.BackgroundImage = global::Bio_Entry.Properties.Resources.profile;
             this.picUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picUser.Location = new System.Drawing.Point(278, 244);
+            this.picUser.Location = new System.Drawing.Point(278, 220);
             this.picUser.Margin = new System.Windows.Forms.Padding(4);
             this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(273, 228);
+            this.picUser.Size = new System.Drawing.Size(273, 252);
             this.picUser.TabIndex = 11;
             this.picUser.TabStop = false;
+            // 
+            // txtRFID
+            // 
+            this.txtRFID.Location = new System.Drawing.Point(278, 150);
+            this.txtRFID.Name = "txtRFID";
+            this.txtRFID.Size = new System.Drawing.Size(713, 22);
+            this.txtRFID.TabIndex = 12;
+            // 
+            // btnIn
+            // 
+            this.btnIn.Location = new System.Drawing.Point(64, 68);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(214, 58);
+            this.btnIn.TabIndex = 13;
+            this.btnIn.Text = "Time In";
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // Time_In
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1269, 692);
+            this.Controls.Add(this.btnIn);
+            this.Controls.Add(this.txtRFID);
             this.Controls.Add(this.picUser);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);
             this.Name = "Time_In";
             this.Text = "Time_In";
-            this.Load += new System.EventHandler(this.Time_In_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -92,5 +112,7 @@
         private System.Windows.Forms.PictureBox picUser;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.TextBox txtRFID;
+        private System.Windows.Forms.Button btnIn;
     }
 }
