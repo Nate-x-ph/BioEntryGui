@@ -147,7 +147,6 @@ C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio-Entry.csp
 C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Interop.WMPLib.dll
 C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio-Entry.csproj.ResolveComReference.cache
-C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio_Entry.Authentication.resources
 C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio_Entry.Dashboard.resources
 C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio_Entry.Forms.Authentication.resources
 C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio_Entry.Forms.Enroll.resources
@@ -168,3 +167,7 @@ C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio-Entry.exe
 C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio-Entry.pdb
 C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio_Entry.Forms.Time_In.resources
 C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio_Entry.Forms.Time_Out.resources
+C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\bin\Debug\HidSharp.dll
+C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\bin\Debug\HidSharp.pdb
+C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\bin\Debug\HidSharp.xml
+C:\Users\jonathan\Documents\GitHub\BioEntryGui\Bio-Entry\obj\Debug\Bio_Entry.Auth_Dashboard.resources

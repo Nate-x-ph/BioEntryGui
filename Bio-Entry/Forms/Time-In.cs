@@ -1,49 +1,48 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Bio_Entry.Forms
 {
     public partial class Time_In : Form
     {
-        // MySQL connection string (update with your database info)
         private string connectionString = "server=localhost;database=bioentry;uid=root;pwd=password;";
 
         public Time_In()
         {
             InitializeComponent();
+            this.Load += new EventHandler(Time_In_Load);
+            txtRFIDInput.KeyDown += new KeyEventHandler(txtRFIDInput_KeyDown);
         }
 
-        // Button click event to start RFID scan
-        private void btnIn_Click(object sender, EventArgs e)
+        // Method to clear user data from labels and the input field
+        public void ClearUserData()
         {
-            // Start reading from RFID Scanner
-            string rfidData = ReadRFID(); // Wait for RFID data
-
-            if (!string.IsNullOrEmpty(rfidData))
-            {
-                GetUserDetails(rfidData);
-            }
-            else
-            {
-                MessageBox.Show("No RFID card detected.");
-            }
+            lblFirstName.Text = string.Empty;
+            lblLastName.Text = string.Empty;
+            txtRFIDInput.Clear();
         }
 
-        // Read RFID from scanner (this should be replaced with actual scanner logic)
-        private string ReadRFID()
+        // Capture the RFID input from the USB reader
+        private void txtRFIDInput_KeyDown(object sender, KeyEventArgs e)
         {
-            // Simulated method to get RFID data from the database
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            if (e.KeyCode == Keys.Enter) // Check if Enter key was pressed
             {
-                conn.Open();
-                string query = "SELECT rfid_data FROM rfid ORDER BY rfid_id DESC LIMIT 1"; // Adjust as needed
+                string rfidData = txtRFIDInput.Text.Trim(); // Get the RFID data
 
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                if (!string.IsNullOrEmpty(rfidData))
                 {
-                    object result = cmd.ExecuteScalar();
-                    return result != null ? result.ToString() : null; // Return null if no RFID is found
+                    GetUserDetails(rfidData); // Process the scanned RFID
+                    txtRFIDInput.Clear(); // Clear the input field for the next scan
                 }
+                else
+                {
+                    MessageBox.Show("RFID scan was invalid. Please scan again.");
+                }
+
+                e.Handled = true; // Prevent default behavior (like going to next line)
+                e.SuppressKeyPress = true; // Stop the 'ding' sound on Enter
             }
         }
 
@@ -52,50 +51,48 @@ namespace Bio_Entry.Forms
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                conn.Open();
-                string query = @"SELECT rfid.faculty_id, rfid.student_id, 
+                try
+                {
+                    conn.Open();
+                    string query = @"SELECT rfid.faculty_id, rfid.student_id, 
                                         faculty.fname AS faculty_fname, faculty.lname AS faculty_lname, 
                                         student.fname AS student_fname, student.lname AS student_lname
-                                 FROM rfid
-                                 LEFT JOIN faculty ON rfid.faculty_id = faculty.faculty_id
-                                 LEFT JOIN student ON rfid.student_id = student.student_id
-                                 WHERE rfid.rfid_data = @rfidData";
+                                     FROM rfid
+                                     LEFT JOIN faculty ON rfid.faculty_id = faculty.faculty_id
+                                     LEFT JOIN student ON rfid.student_id = student.student_id
+                                     WHERE rfid.rfid_data = @rfidData";
 
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@rfidData", rfidData);
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        if (reader.Read())
+                        cmd.Parameters.AddWithValue("@rfidData", rfidData);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
-                            // If faculty_id is not null, it's a faculty user
-                            if (!reader.IsDBNull(reader.GetOrdinal("faculty_id")))
+                            if (reader.Read())
                             {
-                                string firstName = reader["faculty_fname"].ToString();
-                                string lastName = reader["faculty_lname"].ToString();
-                                lblFirstName.Text = firstName;
-                                lblLastName.Text = lastName;
-
-                                // Log faculty attendance
-                                LogFacultyAttendance(reader["faculty_id"].ToString());
+                                if (!reader.IsDBNull(reader.GetOrdinal("faculty_id")))
+                                {
+                                    lblFirstName.Text = reader["faculty_fname"].ToString();
+                                    lblLastName.Text = reader["faculty_lname"].ToString();
+                                    LogFacultyAttendance(reader["faculty_id"].ToString());
+                                }
+                                else if (!reader.IsDBNull(reader.GetOrdinal("student_id")))
+                                {
+                                    lblFirstName.Text = reader["student_fname"].ToString();
+                                    lblLastName.Text = reader["student_lname"].ToString();
+                                    LogStudentAttendance(reader["student_id"].ToString());
+                                }
                             }
-                            // If student_id is not null, it's a student user
-                            else if (!reader.IsDBNull(reader.GetOrdinal("student_id")))
+                            else
                             {
-                                string firstName = reader["student_fname"].ToString();
-                                string lastName = reader["student_lname"].ToString();
-                                lblFirstName.Text = firstName;
-                                lblLastName.Text = lastName;
-
-                                // Log student attendance
-                                LogStudentAttendance(reader["student_id"].ToString());
+                                MessageBox.Show("No user found for the scanned RFID.");
+                                ClearUserData();
                             }
-                        }
-                        else
-                        {
-                            MessageBox.Show("No user found for the scanned RFID.");
                         }
                     }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error retrieving user details: " + ex.Message);
                 }
             }
         }
@@ -105,28 +102,37 @@ namespace Bio_Entry.Forms
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                conn.Open();
-                string currentYear = DateTime.Now.Year.ToString();
-                DateTime timeIn = DateTime.Now;
-
-                // Get the schedule_id related to this faculty
-                string scheduleId = GetScheduleId(facultyId);
-
-                if (!string.IsNullOrEmpty(scheduleId)) // Only proceed if a valid schedule_id is found
+                try
                 {
-                    string query = @"INSERT INTO faculty_log (faculty_id, schedule_id, time_in, year)
-                                     VALUES (@facultyId, @scheduleId, @timeIn, @year)";
+                    conn.Open();
+                    string currentYear = DateTime.Now.Year.ToString();
+                    DateTime timeIn = DateTime.Now;
 
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    string scheduleId = GetScheduleId(facultyId);
+
+                    if (!string.IsNullOrEmpty(scheduleId))
                     {
-                        cmd.Parameters.AddWithValue("@facultyId", facultyId);
-                        cmd.Parameters.AddWithValue("@scheduleId", scheduleId);
-                        cmd.Parameters.AddWithValue("@timeIn", timeIn);
-                        cmd.Parameters.AddWithValue("@year", currentYear);
-                        cmd.ExecuteNonQuery();
-                    }
+                        string query = @"INSERT INTO faculty_log (faculty_id, schedule_id, time_in, year)
+                                         VALUES (@facultyId, @scheduleId, @timeIn, @year)";
 
-                    MessageBox.Show("Faculty attendance logged.");
+                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@facultyId", facultyId);
+                            cmd.Parameters.AddWithValue("@scheduleId", scheduleId);
+                            cmd.Parameters.AddWithValue("@timeIn", timeIn);
+                            cmd.Parameters.AddWithValue("@year", currentYear);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        lblSuccessMessage.Text = "Welcome Ma'am/Sir!"; // Update the success label
+                        lblSuccessMessage.ForeColor = Color.Green;
+                        lblSuccessMessage.Visible = true; // Make the label visible
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lblSuccessMessage.Text = "Record Not Found!" + ex.Message; // Display error in the label
+                    lblSuccessMessage.ForeColor = Color.Red; // Set text color to red for error
                 }
             }
         }
@@ -136,28 +142,37 @@ namespace Bio_Entry.Forms
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                conn.Open();
-                string currentYear = DateTime.Now.Year.ToString();
-                DateTime timeIn = DateTime.Now;
-
-                // Get the schedule_id related to this student
-                string scheduleId = GetScheduleId(studentId);
-
-                if (!string.IsNullOrEmpty(scheduleId)) // Only proceed if a valid schedule_id is found
+                try
                 {
-                    string query = @"INSERT INTO student_log (student_id, schedule_id, time_in, year)
-                                     VALUES (@studentId, @scheduleId, @timeIn, @year)";
+                    conn.Open();
+                    string currentYear = DateTime.Now.Year.ToString();
+                    DateTime timeIn = DateTime.Now;
 
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    string scheduleId = GetScheduleId(studentId);
+
+                    if (!string.IsNullOrEmpty(scheduleId))
                     {
-                        cmd.Parameters.AddWithValue("@studentId", studentId);
-                        cmd.Parameters.AddWithValue("@scheduleId", scheduleId);
-                        cmd.Parameters.AddWithValue("@timeIn", timeIn);
-                        cmd.Parameters.AddWithValue("@year", currentYear);
-                        cmd.ExecuteNonQuery();
-                    }
+                        string query = @"INSERT INTO student_log (student_id, schedule_id, time_in, year)
+                                         VALUES (@studentId, @scheduleId, @timeIn, @year)";
 
-                    MessageBox.Show("Student attendance logged.");
+                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@studentId", studentId);
+                            cmd.Parameters.AddWithValue("@scheduleId", scheduleId);
+                            cmd.Parameters.AddWithValue("@timeIn", timeIn);
+                            cmd.Parameters.AddWithValue("@year", currentYear);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        lblSuccessMessage.Text = "Welcome My Dear Student!"; // Update the success label
+                        lblSuccessMessage.ForeColor = Color.Green;
+                        lblSuccessMessage.Visible = true; // Make the label visible
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lblSuccessMessage.Text = "Record Not Found!" + ex.Message; // Display error in the label
+                    lblSuccessMessage.ForeColor = Color.Red; // Set text color to red for error
                 }
             }
         }
@@ -167,18 +182,41 @@ namespace Bio_Entry.Forms
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                conn.Open();
-                string query = @"SELECT schedule_id FROM schedule
-                                 WHERE (faculty_id = @userId OR clist_id = @userId) LIMIT 1"; // Adjust as needed
-
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                try
                 {
-                    cmd.Parameters.AddWithValue("@userId", userId);
-                    object result = cmd.ExecuteScalar();
+                    conn.Open();
+                    string query = @"SELECT schedule_id FROM schedule
+                                     WHERE (faculty_id = @userId OR clist_id = @userId) LIMIT 1";
 
-                    return result != null ? result.ToString() : null; // Return null if not found
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@userId", userId);
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            return result.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No valid schedule found for the user. Attendance log cannot be created.");
+                            return null;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error retrieving schedule ID: " + ex.Message);
+                    return null;
                 }
             }
         }
+
+        private void Time_In_Load(object sender, EventArgs e)
+        {
+            txtRFIDInput.Focus(); // Set focus to the RFID input field
+        }
+
+        
     }
 }

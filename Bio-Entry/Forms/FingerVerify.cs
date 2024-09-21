@@ -416,7 +416,7 @@ namespace Bio_Entry.Forms
                                 {
                                     SetPrompt("VERIFIED! Welcome!", true);
 
-                                    User userDetailsForm = new User(firstName, lastName);
+                                    User userDetailsForm = new User(firstName, lastName, userId.ToString());
                                     userDetailsForm.Show();
 
                                     try

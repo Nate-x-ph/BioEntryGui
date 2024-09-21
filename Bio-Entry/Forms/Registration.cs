@@ -44,10 +44,9 @@ namespace Bio_Entry.Forms
         private Panel navPanel;          // Reference to the Dashboard's navPanel
         private Label lblTitle;          // Reference to the Dashboard's lblTitle
         private Panel titlePanel;
-        private Panel logoPanel;
         public string defaultTitle { get; private set; } = "Welcome bossing kumusta ang buhay-buhay!"; // Default title for the dashboard
 
-        public Registration(Panel dashboardPanel, Panel navPanel, Label lblTitle, Panel titlePanel, Panel logoPanel)
+        public Registration(Panel dashboardPanel, Panel navPanel, Label lblTitle, Panel titlePanel)
         {
             InitializeComponent();
 

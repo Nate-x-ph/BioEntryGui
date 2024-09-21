@@ -186,7 +186,7 @@ namespace Bio_Entry
             }
 
             // Create an instance of the Registration form
-            Forms.Registration registrationForm = new Forms.Registration(this.panelDesktopPane, this.navPanel, this.lblTitle, this.titlePanel, this.logoPanel);
+            Forms.Registration registrationForm = new Forms.Registration(this.panelDesktopPane, this.navPanel, this.lblTitle, this.titlePanel);
             // Set the Dashboard form as the owner
             registrationForm.Owner = this;
             // Open the Registration form
@@ -214,7 +214,7 @@ namespace Bio_Entry
                 startupForm.Close();
 
                 // Show the Authentication form
-                Authentication authForm = new Authentication(this);
+                Auth_Dashboard authForm = new Auth_Dashboard(this);
                 authForm.Show();
 
                 // Optionally, close the current form if needed
@@ -298,7 +298,7 @@ namespace Bio_Entry
                 startupForm.Close();
 
                 // Show the Authentication form
-                Authentication authForm = new Authentication(this);
+                Auth_Dashboard authForm = new Auth_Dashboard(this);
                 authForm.Show();
 
                 // Optionally, close the current form if needed

@@ -113,6 +113,16 @@ namespace Bio_Entry.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bossing {
+            get {
+                object obj = ResourceManager.GetObject("bossing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CCS {
             get {
                 object obj = ResourceManager.GetObject("CCS", resourceCulture);

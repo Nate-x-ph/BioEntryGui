@@ -310,7 +310,7 @@ namespace Bio_Entry.Forms
                             lblStatus.ForeColor = System.Drawing.Color.Green; // Optional: Set text color for success
 
                             // Show user details in a new form
-                            User userDetailsForm = new User(firstName, lastName);
+                            User userDetailsForm = new User(firstName, lastName, userId.ToString());
                             userDetailsForm.Show();
 
                             serialPort.Write("1"); // Signal to Arduino to activate buzzer
