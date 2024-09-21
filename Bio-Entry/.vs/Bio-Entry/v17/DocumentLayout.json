@@ -7,44 +7,56 @@
       "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\forms\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\forms\\fingerverify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\fingerverify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\forms\\time-out.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\time-out.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\forms\\rfidauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\rfidauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\forms\\time-in.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\time-in.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\forms\\rfidauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\rfidauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\forms\\fingerprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\fingerprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\forms\\fingerprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\fingerprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\forms\\fingerverify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\fingerverify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\forms\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\forms\\time-in.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\time-in.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\forms\\time-out.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\time-out.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\forms\\enroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\enroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|c:\\users\\jonathan\\documents\\github\\bioentrygui\\bio-entry\\forms\\enroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\forms\\enroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\enroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\forms\\fingerverify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB40BAA9-EED7-4A38-B45C-94EBFE24DA91}|Bio-Entry.csproj|solutionrelative:forms\\fingerverify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,19 +66,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "rfidAuth.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\rfidAuth.cs",
+              "RelativeDocumentMoniker": "Forms\\rfidAuth.cs",
+              "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\rfidAuth.cs [Design]",
+              "RelativeToolTip": "Forms\\rfidAuth.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T03:53:09.588Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Time-Out.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\Time-Out.cs",
               "RelativeDocumentMoniker": "Forms\\Time-Out.cs",
               "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\Time-Out.cs [Design]",
               "RelativeToolTip": "Forms\\Time-Out.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T14:51:03.406Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-20T14:51:03.406Z"
             },
             {
               "$type": "Document",
@@ -76,14 +99,14 @@
               "RelativeDocumentMoniker": "Authentication.cs",
               "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Authentication.cs",
               "RelativeToolTip": "Authentication.cs",
-              "ViewState": "AgIAAOwAAAAAAAAAAAAmwP4AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAqwP4AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T14:35:36.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Authentication.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Authentication.cs",
               "RelativeDocumentMoniker": "Authentication.cs",
@@ -95,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Dashboard.cs",
               "RelativeDocumentMoniker": "Dashboard.cs",
@@ -103,7 +126,19 @@
               "RelativeToolTip": "Dashboard.cs",
               "ViewState": "AgIAAOgAAAAAAAAAAAA2wKEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T14:33:22.611Z",
+              "WhenOpened": "2024-09-20T14:33:22.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "rfidAuth.cs",
+              "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\rfidAuth.cs",
+              "RelativeDocumentMoniker": "Forms\\rfidAuth.cs",
+              "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\rfidAuth.cs",
+              "RelativeToolTip": "Forms\\rfidAuth.cs",
+              "ViewState": "AgIAAAcBAAAAAAAAAAAmwBcBAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T03:53:12.423Z",
               "EditorCaption": ""
             },
             {
@@ -114,14 +149,52 @@
               "RelativeDocumentMoniker": "Forms\\User.cs",
               "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\User.cs",
               "RelativeToolTip": "Forms\\User.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAawDwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAswGgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T13:50:54.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "FingerVerify.cs",
+              "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\FingerVerify.cs",
+              "RelativeDocumentMoniker": "Forms\\FingerVerify.cs",
+              "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\FingerVerify.cs",
+              "RelativeToolTip": "Forms\\FingerVerify.cs",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAUwBsBAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T09:44:14.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Fingerprint.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\Fingerprint.cs",
+              "RelativeDocumentMoniker": "Forms\\Fingerprint.cs",
+              "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\Fingerprint.cs [Design]",
+              "RelativeToolTip": "Forms\\Fingerprint.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T03:20:44.104Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Fingerprint.cs",
+              "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\Fingerprint.cs",
+              "RelativeDocumentMoniker": "Forms\\Fingerprint.cs",
+              "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\Fingerprint.cs",
+              "RelativeToolTip": "Forms\\Fingerprint.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAAwNkAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T03:20:47.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Time-In.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\Time-In.cs",
               "RelativeDocumentMoniker": "Forms\\Time-In.cs",
@@ -133,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "User.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\User.cs",
               "RelativeDocumentMoniker": "Forms\\User.cs",
@@ -145,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Enroll.cs",
               "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\Enroll.cs",
               "RelativeDocumentMoniker": "Forms\\Enroll.cs",
@@ -153,45 +226,18 @@
               "RelativeToolTip": "Forms\\Enroll.cs",
               "ViewState": "AgIAAGYAAAAAAAAAAAAiwHwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T11:50:26.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T11:50:26.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Enroll.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\Enroll.cs",
               "RelativeDocumentMoniker": "Forms\\Enroll.cs",
               "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\Enroll.cs [Design]",
               "RelativeToolTip": "Forms\\Enroll.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T11:52:17.113Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FingerVerify.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\FingerVerify.cs",
-              "RelativeDocumentMoniker": "Forms\\FingerVerify.cs",
-              "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\FingerVerify.cs [Design]",
-              "RelativeToolTip": "Forms\\FingerVerify.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T10:55:23.792Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FingerVerify.cs",
-              "DocumentMoniker": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\FingerVerify.cs",
-              "RelativeDocumentMoniker": "Forms\\FingerVerify.cs",
-              "ToolTip": "C:\\Users\\jonathan\\Documents\\GitHub\\BioEntryGui\\Bio-Entry\\Forms\\FingerVerify.cs",
-              "RelativeToolTip": "Forms\\FingerVerify.cs",
-              "ViewState": "AgIAADIBAAAAAAAAAAAcwDkBAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T09:44:14.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T11:52:17.113Z"
             }
           ]
         }
